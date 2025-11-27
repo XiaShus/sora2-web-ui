@@ -1,0 +1,5 @@
+{
+  "name": "SoraGen 视频创作",
+  "description": "基于Sora-2模型的React视频生成应用，支持任务管理、批量抽卡与视频画廊。",
+  "requestFramePermissions": []
+}
