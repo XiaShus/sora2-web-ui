@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { HashRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
-import { Settings, Film, List, Plus, Trash2, Download, AlertCircle, Play, Image as ImageIcon, CheckCircle, Loader2, Layers, Zap } from 'lucide-react';
+import { Settings, Film, List, Plus, Trash2, Download, AlertCircle, Play, Image as ImageIcon, CheckCircle, Loader2, Layers, Zap, Globe } from 'lucide-react';
 import { AppSettings, GenerationTask, TaskStatus } from './types';
 import { generateVideo } from './services/api';
 
@@ -37,6 +37,15 @@ const Navbar: React.FC<{ onOpenSettings: () => void }> = ({ onOpenSettings }) =>
           <Film className="w-5 h-5" />
           <span className="hidden sm:inline">视频画廊</span>
         </Link>
+        <a 
+          href="https://open.geeknow.top" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors text-slate-400 hover:bg-slate-800 hover:text-white"
+        >
+          <Globe className="w-5 h-5" />
+          <span className="hidden sm:inline">国内API</span>
+        </a>
       </div>
 
       <button 
@@ -414,8 +423,8 @@ const App: React.FC = () => {
   
   // Default Settings
   const [settings, setSettings] = useState<AppSettings>({
-    apiUrl: 'https://mj.do/v1/chat/completions',
-    apiKey: 'sk-btLslcZGHzTJaMkpEZFmaq98uGttjJzUi2wrVwovMTii65Ko', // User provided default
+    apiUrl: 'https://open.geeknow.top/v1/chat/completions',
+    apiKey: 'sk-YqMScgAeYGsHXSNvNigf8rVX1NniIppHeYg7UI7nZkxwOIBB', // User provided default
   });
 
   // Load from LocalStorage
